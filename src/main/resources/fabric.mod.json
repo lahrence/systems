@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "create-systems",
+	"version": "${version}",
+	"name": "Create: Systems",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/create-systems/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.lahrence.create.systems.CreateSystems"
+		],
+		"client": [
+			"com.lahrence.create.systems.CreateSystemsClient"
+		]
+	},
+	"mixins": [
+		"create-systems.mixins.json",
+		{
+			"config": "create-systems.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.5",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
